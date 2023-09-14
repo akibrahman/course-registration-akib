@@ -27,6 +27,9 @@ const Courses = () => {
     setEnrolledCourses(tempEnrolledCourses);
   };
 
+  enrolledCourses.map((course) => (enrolledCredit += course.credit_hour));
+  remainingCredit -= enrolledCredit;
+
   return (
     <div className="flex gap-6">
       {/* Courses  */}

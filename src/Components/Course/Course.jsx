@@ -1,7 +1,8 @@
+import propTypes from "prop-types";
 import { FiDollarSign } from "react-icons/fi";
 import { HiOutlineBookOpen } from "react-icons/hi";
 
-const Course = ({ course }) => {
+const Course = ({ course, enroll }) => {
   const { id, image, title, description, price, credit_hour } = course;
   return (
     <div className=" bg-white p-4 rounded-xl">
@@ -16,11 +17,18 @@ const Course = ({ course }) => {
           Credit: {credit_hour}hr
         </p>
       </div>
-      <button className=" capitalize text-white text-lg font-semibold bg-[#2F80ED] rounded-lg w-full py-1">
+      <button
+        onClick={() => enroll(id)}
+        className=" capitalize text-white text-lg font-semibold bg-[#2F80ED] rounded-lg w-full py-1"
+      >
         Select
       </button>
     </div>
   );
 };
 
+Course.propTypes = {
+  course: propTypes.object.isRequired,
+  enroll: propTypes.func.isRequired,
+};
 export default Course;

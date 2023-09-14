@@ -22,19 +22,10 @@ const Courses = () => {
       alert(`Already Enrolled - '${clickedCourse.title}'`);
       return;
     }
-    enrolledCredit = 0;
-    enrolledCourses.map((course) => (enrolledCredit += course.credit_hour));
-    enrolledCredit += clickedCourse.credit_hour;
-    if (enrolledCredit > 20) {
-      alert("You are running out of your Credit Hour!");
-      return;
-    }
+
     let tempEnrolledCourses = [...enrolledCourses, clickedCourse];
     setEnrolledCourses(tempEnrolledCourses);
   };
-
-  enrolledCourses.map((course) => (enrolledCredit += course.credit_hour));
-  remainingCredit -= enrolledCredit;
 
   return (
     <div className="flex gap-6">

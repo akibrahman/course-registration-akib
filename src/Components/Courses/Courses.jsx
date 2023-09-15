@@ -2,9 +2,13 @@ import { useEffect, useState } from "react";
 import Course from "../Course/Course";
 import EnrolledCourse from "../EnrolledCourse/EnrolledCourse";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Courses = () => {
   let remainingCredit = 20;
   let enrolledCredit = 0;
+  let enrolledPrice = 0;
   const [courses, setCourses] = useState([]);
   useEffect(() => {
     fetch("courses.json")
@@ -19,25 +23,34 @@ const Courses = () => {
       (course) => course.id === clickedCourse.id
     );
     if (checkClickedCourse) {
-      alert(`Already Enrolled - '${clickedCourse.title}'`);
+      toast.info(`Already Enrolled - '${clickedCourse.title}'!`, {
+        autoClose: 2000,
+      });
       return;
     }
     enrolledCredit = 0;
     enrolledCourses.map((course) => (enrolledCredit += course.credit_hour));
     enrolledCredit += clickedCourse.credit_hour;
     if (enrolledCredit > 20) {
-      alert("You are running out of your Credit Hour!");
+      toast.warn("You are running out of your Credit Hour!", {
+        autoClose: 2000,
+      });
       return;
     }
     let tempEnrolledCourses = [...enrolledCourses, clickedCourse];
     setEnrolledCourses(tempEnrolledCourses);
+    toast.success(`'${clickedCourse.title}' Course Enrolled Successfully.`, {
+      autoClose: 2000,
+    });
   };
 
+  enrolledCourses.map((course) => (enrolledPrice += course.price));
   enrolledCourses.map((course) => (enrolledCredit += course.credit_hour));
   remainingCredit -= enrolledCredit;
 
   return (
     <div className="flex gap-6">
+      <ToastContainer />
       {/* Courses  */}
       <div className=" w-3/4 grid grid-cols-3 gap-6">
         {/* Course  */}
@@ -64,7 +77,7 @@ const Courses = () => {
           Total Credit Hour : {enrolledCredit}
         </p>
         <p className="text-[#5F5F5F] text-base font-medium py-4 ">
-          Total Price : 0 USD
+          Total Price : {enrolledPrice} USD
         </p>
       </div>
     </div>

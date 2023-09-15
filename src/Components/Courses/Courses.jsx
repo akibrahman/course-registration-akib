@@ -31,10 +31,19 @@ const Courses = () => {
     enrolledCredit = 0;
     enrolledCourses.map((course) => (enrolledCredit += course.credit_hour));
     enrolledCredit += clickedCourse.credit_hour;
-    if (enrolledCredit > 20) {
-      toast.warn("You are running out of your Credit Hour!", {
+    if (enrolledCredit - clickedCourse.credit_hour === 20) {
+      toast.error(`Your Credit Hour is Over!`, {
         autoClose: 2000,
       });
+      return;
+    } else if (enrolledCredit > 20) {
+      let shortCredit = enrolledCredit - 20;
+      toast.warn(
+        `You need ${shortCredit} Credit Hour more to Enroll this Course!`,
+        {
+          autoClose: 2000,
+        }
+      );
       return;
     }
     let tempEnrolledCourses = [...enrolledCourses, clickedCourse];

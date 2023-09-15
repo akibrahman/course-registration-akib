@@ -49,17 +49,17 @@ const Courses = () => {
   remainingCredit -= enrolledCredit;
 
   return (
-    <div className="flex gap-6">
+    <div className="flex flex-col  md:items-center lg:items-start lg:flex-row gap-6">
       <ToastContainer />
       {/* Courses  */}
-      <div className=" w-3/4 grid grid-cols-3 gap-6">
+      <div className=" w-full lg:w-3/4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {/* Course  */}
         {courses.map((course) => (
           <Course key={course.id} course={course} enroll={enroll}></Course>
         ))}
       </div>
       {/* Cart  */}
-      <div className=" w-1/4 bg-white rounded-xl p-6 h-max">
+      <div className=" w-full md:w-max  lg:w-1/4 bg-white rounded-xl p-6 h-max">
         <p className="py-4 text-[#2F80ED]  text-lg  font-bold border-b">
           Credit Hour Remaining {remainingCredit} hr
         </p>

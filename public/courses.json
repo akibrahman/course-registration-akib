@@ -3,7 +3,7 @@
     "id": 1,
     "image": "https://i.ibb.co/Z1PXvMB/Rectangle-2-2.png",
     "title": "Introduction to C Programming",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": " Foundation of software development. Syntax mastery empowers programmers to create robust, low-level applications.",
     "price": 15000,
     "credit_hour": 1
   },
@@ -11,7 +11,7 @@
     "id": 2,
     "image": "https://i.ibb.co/rph8FkH/Rectangle-2-3.png",
     "title": "Introduction to Algorithms",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Algorithms are the elegant recipes of programming, guiding computers to solve problems efficiently, like a chef's precise instructions for cooking.",
     "price": 25000,
     "credit_hour": 2
   },
@@ -19,7 +19,7 @@
     "id": 3,
     "image": "https://i.ibb.co/2P8VD56/Rectangle-2-4.png",
     "title": "Introduction to C++ for DSA",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Data Structures and Algorithms in C++ empower efficient information management and problem-solving, fundamental for software development.",
     "price": 10000,
     "credit_hour": 10
   },
@@ -27,7 +27,7 @@
     "id": 4,
     "image": "https://i.ibb.co/Fn0jfSs/Rectangle-3.png",
     "title": "Basic Data Structures",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Data structures organize and store data efficiently, enabling operations like retrieval, insertion, and deletion, fundamental for computer algorithms.",
     "price": 35000,
     "credit_hour": 5
   },
@@ -35,7 +35,7 @@
     "id": 5,
     "image": "https://i.ibb.co/k1gdSjD/Rectangle-2.png",
     "title": "Introduction to OOP Python",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Object-Oriented Programming in Python empowers clean, enhancing software design and modularity for efficient, organized development.",
     "price": 19000,
     "credit_hour": 5
   },
@@ -43,7 +43,7 @@
     "id": 6,
     "image": "https://i.ibb.co/Ns9v3F3/Rectangle-2-5.png",
     "title": "Software Engineering",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Crafting digital solutions, merging creativity and logic, to solve real-world problems, driving innovation in the ever-evolving tech landscape.",
     "price": 23000,
     "credit_hour": 2
   },
@@ -51,7 +51,7 @@
     "id": 7,
     "image": "https://i.ibb.co/5hxjBT3/Rectangle-3-1.png",
     "title": "AWS, Cloud Computing",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Amazon Web Services (AWS) offers cloud computing services, computing power, and AI tools, empowering businesses to scale and innovate.",
     "price": 35000,
     "credit_hour": 5
   },
@@ -59,7 +59,7 @@
     "id": 8,
     "image": "https://i.ibb.co/hRc2GHW/Rectangle-2-1.png",
     "title": "Database (MySQL)",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "SQL databases store, retrieve and manage structured data efficiently and powering applications across diverse industries.",
     "price": 19000,
     "credit_hour": 5
   },
@@ -67,7 +67,7 @@
     "id": 9,
     "image": "https://i.ibb.co/5jqN6ds/Rectangle-2-6.png",
     "title": "Problem-Solving Part",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Combining logic and creativity to craft elegant solutions that transform complex challenges into elegant, efficient code.",
     "price": 23000,
     "credit_hour": 2
   }
